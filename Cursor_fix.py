@@ -7,9 +7,9 @@ from pynput import keyboard
 import time
 
 def isuwpfc():
-    ww = win32gui.GetForegroundWindow()
-    if win32gui.GetWindowLong(active_window, win32con.GWL_STYLE) & win32con.WS_VISIBLE:
-        class_name = win32gui.GetClassName(active_window)
+    wd = win32gui.GetForegroundWindow()
+    if win32gui.GetWindowLong(wd, win32con.GWL_STYLE) & win32con.WS_VISIBLE:
+        class_name = win32gui.GetClassName(wd)
         return "ApplicationFrameWindow" in class_name
     return False
 
